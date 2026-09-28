@@ -1,8 +1,7 @@
+//  SwiftUIView.swift
+//  YouAreAwesome
 //
-//  ContentView.swift
-//  Lab1
-//
-//  Created by Steven Senger on 9/28/26.
+//  Created by Steven Senger on 9/23/26.
 //
 
 import SwiftUI
@@ -10,12 +9,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("What is Football to You?")
+                .font(Font.largeTitle.weight(.light))
+                .foregroundStyle(.green)
+            HStack {
+                // This is a modification
+                Image(systemName: "figure.american.football")
+                    .resizable().scaledToFit()
+                    .foregroundStyle(.blue)
+                Image(systemName: "figure.australian.football")
+                    .resizable().scaledToFit()
+                    .foregroundStyle(.indigo)
+                Image(systemName: "figure.indoor.soccer")
+                    .resizable().scaledToFit()
+                    .foregroundStyle(Color(red: 0.764,green:0.364,blue:0.982))
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
